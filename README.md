@@ -45,16 +45,6 @@ Add the following plugin configuration to your Maven project's `pom.xml`:
 
 For detailed configuration options, see the [maven-checkstyle-plugin documentation](https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html).
 
-## 🎯 Enterprise Setup
-
-For organizations using a parent POM approach, add the plugin configuration to your `<pluginManagement/>` section in your parent POM. This allows individual projects to simply reference the plugin without duplicating configuration:
-
-```xml
-<plugin>
-  <artifactId>maven-checkstyle-plugin</artifactId>
-</plugin>
-```
-
 ## ⚙️ Configuration
 
 ### Custom Suppressions
@@ -75,7 +65,6 @@ Import the provided configuration file at `src/main/idea/IDEA-Checkstyle-Default
 - ✅ Maven plugin integration
 - ✅ Customizable suppressions
 - ✅ IDE configuration support
-- ✅ Enterprise-ready for parent POM usage
 
 ## 📄 License
 
