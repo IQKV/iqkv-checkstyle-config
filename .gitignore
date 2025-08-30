@@ -47,3 +47,4 @@ package-lock.json
 .stylelintcache
 
 CLAUDE.local.md
+.release-it.json
