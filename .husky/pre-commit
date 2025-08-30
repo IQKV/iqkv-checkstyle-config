@@ -16,7 +16,7 @@ fi
 
 valid_commit="^(feat|fix|rfc|docs|style|improvement|refactor|perf|test|chore|build|ci|revert)(.+?)?: .+"
 if [[ ! $1 =~ $valid_commit ]]; then
-   echo -e "\n🚨 Your commit title did not follow semantic versioning."
+   echo -e "\n🚨 Your commit title did not follow semantic versioning. but " $1
     exit 1
 fi
 
