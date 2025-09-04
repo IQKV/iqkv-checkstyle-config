@@ -12,7 +12,7 @@ To use it, configure your maven-checkstyle-plugin like so:
      <version>3.6.0</version>
      <dependencies>
        <dependency>
-         <groupId>com.iqkv</groupId>
+         <groupId>com.github.dimdnk</groupId>
          <artifactId>checkstyle-config</artifactId>
          <version>LATEST-VERSION</version>
        </dependency>
