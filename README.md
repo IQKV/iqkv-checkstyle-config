@@ -1,6 +1,6 @@
 # ✨ Checkstyle Configuration
 
-[![Build Status](https://know-how.run/api/badges/dimdnk/checkstyle-config/status.svg)](https://know-how.run/dimdnk/checkstyle-config)
+[![Build Status](https://know-how.run/api/badges/IQKV/checkstyle-config/status.svg)](https://know-how.run/IQKV/checkstyle-config)
 
 This project provides a default configuration for Checkstyle.
 
