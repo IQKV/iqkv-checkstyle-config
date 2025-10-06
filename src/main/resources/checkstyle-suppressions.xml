@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress certain checks for test files -->
+    <suppress checks="MagicNumber" files=".*Test\.java"/>
+    <suppress checks="MultipleStringLiterals" files=".*Test\.java"/>
+    <suppress checks="AvoidInlineConditionals" files=".*Test\.java"/>
+    <suppress checks="ClassDataAbstractionCoupling" files=".*Test\.java"/>
+    <suppress checks="ClassFanOutComplexity" files=".*Test\.java"/>
+    <suppress checks="CyclomaticComplexity" files=".*Test\.java"/>
+    <suppress checks="JavaNCSS" files=".*Test\.java"/>
+    <suppress checks="NPathComplexity" files=".*Test\.java"/>
+    <suppress checks="ReturnCount" files=".*Test\.java"/>
+    <suppress checks="NestedForDepth" files=".*Test\.java"/>
+    <suppress checks="NestedIfDepth" files=".*Test\.java"/>
+    <suppress checks="NestedTryDepth" files=".*Test\.java"/>
+    <suppress checks="BooleanExpressionComplexity" files=".*Test\.java"/>
+    <suppress checks="DesignForExtension" files=".*Test\.java"/>
+    <suppress checks="HideUtilityClassConstructor" files=".*Test\.java"/>
+    <suppress checks="VisibilityModifier" files=".*Test\.java"/>
+    <suppress checks="FinalParameters" files=".*Test\.java"/>
+    <suppress checks="UncommentedMain" files=".*Test\.java"/>
+    
+    <!-- Suppress certain checks for Spring Boot application classes -->
+    <suppress checks="HideUtilityClassConstructor" files=".*Application\.java"/>
+    <suppress checks="UncommentedMain" files=".*Application\.java"/>
+    <suppress checks="DesignForExtension" files=".*Application\.java"/>
+    
+    <!-- Suppress certain checks for configuration classes -->
+    <suppress checks="DesignForExtension" files=".*Config\.java"/>
+    <suppress checks="DesignForExtension" files=".*Configuration\.java"/>
+    <suppress checks="HideUtilityClassConstructor" files=".*Config\.java"/>
+    <suppress checks="HideUtilityClassConstructor" files=".*Configuration\.java"/>
+    
+    <!-- Suppress certain checks for DTOs and entities -->
+    <suppress checks="VisibilityModifier" files=".*Dto\.java"/>
+    <suppress checks="VisibilityModifier" files=".*Entity\.java"/>
+    <suppress checks="VisibilityModifier" files=".*Model\.java"/>
+    <suppress checks="DesignForExtension" files=".*Dto\.java"/>
+    <suppress checks="DesignForExtension" files=".*Entity\.java"/>
+    <suppress checks="DesignForExtension" files=".*Model\.java"/>
+    <suppress checks="FinalParameters" files=".*Dto\.java"/>
+    <suppress checks="FinalParameters" files=".*Entity\.java"/>
+    <suppress checks="FinalParameters" files=".*Model\.java"/>
+    
+    <!-- Suppress certain checks for controllers -->
+    <suppress checks="DesignForExtension" files=".*Controller\.java"/>
+    <suppress checks="ThrowsCount" files=".*Controller\.java"/>
+    
+    <!-- Suppress certain checks for exception classes -->
+    <suppress checks="MutableException" files=".*Exception\.java"/>
+    
+    <!-- Suppress checks for generated code -->
+    <suppress checks="." files=".*[\\/]generated[\\/].*"/>
+    <suppress checks="." files=".*[\\/]target[\\/].*"/>
+    <suppress checks="." files=".*[\\/]build[\\/].*"/>
+    
+    <!-- Suppress line length for import statements -->
+    <suppress checks="LineLength" files=".*\.java" lines="1-50" message=".*import.*"/>
+    
+    <!-- Suppress magic number for common HTTP status codes -->
+    <suppress checks="MagicNumber" message=".*200.*"/>
+    <suppress checks="MagicNumber" message=".*201.*"/>
+    <suppress checks="MagicNumber" message=".*400.*"/>
+    <suppress checks="MagicNumber" message=".*401.*"/>
+    <suppress checks="MagicNumber" message=".*403.*"/>
+    <suppress checks="MagicNumber" message=".*404.*"/>
+    <suppress checks="MagicNumber" message=".*500.*"/>
+    
+    <!-- Suppress TodoComment for specific patterns -->
+    <suppress checks="TodoComment" message=".*NOSONAR.*"/>
+    <suppress checks="TodoComment" message=".*@SuppressWarnings.*"/>
+</suppressions>

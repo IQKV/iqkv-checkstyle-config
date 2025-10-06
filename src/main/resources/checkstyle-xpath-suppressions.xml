@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionXpathFilter Experimental Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressionxpathfilter_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress DesignForExtension for methods with specific annotations -->
+    <suppress-xpath
+            checks="DesignForExtension"
+            query="//METHOD_DEF[.//ANNOTATION[.//IDENT[@text='Override' or @text='Test' or @text='Before' or @text='After' or @text='BeforeEach' or @text='AfterEach' or @text='BeforeAll' or @text='AfterAll' or @text='PostConstruct' or @text='PreDestroy' or @text='Autowired' or @text='Value' or @text='ConfigurationProperties']]]"/>
+    
+    <!-- Suppress VisibilityModifier for fields with specific annotations -->
+    <suppress-xpath
+            checks="VisibilityModifier"
+            query="//VARIABLE_DEF[.//ANNOTATION[.//IDENT[@text='Autowired' or @text='Value' or @text='Inject' or @text='Resource' or @text='PersistenceContext' or @text='PersistenceUnit' or @text='EJB' or @text='WebServiceRef' or @text='Mock' or @text='InjectMocks' or @text='Spy' or @text='Captor']]]"/>
+    
+    <!-- Suppress HideUtilityClassConstructor for classes with specific annotations -->
+    <suppress-xpath
+            checks="HideUtilityClassConstructor"
+            query="//CLASS_DEF[.//ANNOTATION[.//IDENT[@text='Component' or @text='Service' or @text='Repository' or @text='Controller' or @text='RestController' or @text='Configuration' or @text='SpringBootApplication' or @text='EnableAutoConfiguration' or @text='TestConfiguration']]]"/>
+    
+    <!-- Suppress FinalParameters for methods with specific annotations -->
+    <suppress-xpath
+            checks="FinalParameters"
+            query="//METHOD_DEF[.//ANNOTATION[.//IDENT[@text='Override' or @text='Test' or @text='RequestMapping' or @text='GetMapping' or @text='PostMapping' or @text='PutMapping' or @text='DeleteMapping' or @text='PatchMapping']]]"/>
+    
+    <!-- Suppress MagicNumber for annotation values -->
+    <suppress-xpath
+            checks="MagicNumber"
+            query="//ANNOTATION//NUM_INT | //ANNOTATION//NUM_LONG | //ANNOTATION//NUM_FLOAT | //ANNOTATION//NUM_DOUBLE"/>
+    
+    <!-- Suppress MagicNumber for array initializers -->
+    <suppress-xpath
+            checks="MagicNumber"
+            query="//ARRAY_INIT//NUM_INT | //ARRAY_INIT//NUM_LONG | //ARRAY_INIT//NUM_FLOAT | //ARRAY_INIT//NUM_DOUBLE"/>
+    
+    <!-- Suppress MultipleStringLiterals for test methods -->
+    <suppress-xpath
+            checks="MultipleStringLiterals"
+            query="//METHOD_DEF[.//ANNOTATION[.//IDENT[@text='Test' or @text='ParameterizedTest' or @text='RepeatedTest' or @text='TestFactory' or @text='TestTemplate']]]//STRING_LITERAL"/>
+    
+    <!-- Suppress UnusedLocalVariable for variables in catch blocks -->
+    <suppress-xpath
+            checks="UnusedLocalVariable"
+            query="//LITERAL_CATCH//PARAMETER_DEF"/>
+    
+    <!-- Suppress IllegalThrows for test methods -->
+    <suppress-xpath
+            checks="IllegalThrows"
+            query="//METHOD_DEF[.//ANNOTATION[.//IDENT[@text='Test' or @text='ParameterizedTest' or @text='RepeatedTest' or @text='TestFactory' or @text='TestTemplate']]]//LITERAL_THROWS"/>
+    
+    <!-- Suppress ReturnCount for builder pattern methods -->
+    <suppress-xpath
+            checks="ReturnCount"
+            query="//METHOD_DEF[.//IDENT[contains(@text, 'builder') or contains(@text, 'Builder') or ends-with(@text, 'build')]]"/>
+    
+    <!-- Suppress CyclomaticComplexity for switch expressions -->
+    <suppress-xpath
+            checks="CyclomaticComplexity"
+            query="//LITERAL_SWITCH[parent::EXPR]"/>
+</suppressions>
