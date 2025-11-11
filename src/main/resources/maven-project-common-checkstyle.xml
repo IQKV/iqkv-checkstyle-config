@@ -128,6 +128,8 @@
                     STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF,
                     COMPACT_CTOR_DEF"/>
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
+            <property name="allowMultipleEmptyLines" value="false"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
         </module>
         <module name="SeparatorWrap">
             <property name="id" value="SeparatorWrapDot"/>
@@ -156,6 +158,7 @@
             <property name="tokens" value="METHOD_REF"/>
             <property name="option" value="nl"/>
         </module>
+        <module name="NoWhitespaceBeforeCaseDefaultColon"/>
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
             <message key="name.invalidPattern"
@@ -176,6 +179,11 @@
             <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
             <message key="name.invalidPattern"
                      value="Parameter name ''{0}'' must match pattern ''{1}''."/>
+        </module>
+        <module name="RecordComponentName">
+            <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+            <message key="name.invalidPattern"
+                     value="Record component name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="LambdaParameterName">
             <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
@@ -254,18 +262,24 @@
             <property name="customImportOrderRules" value="STATIC###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE"/>
             <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
             <property name="standardPackageRegExp" value="^(java|javax|jakarta)\."/>
-            <property name="specialImportsRegExp" value="^(tech|expert|android|dev|build)\." />
+            <property name="specialImportsRegExp" value="^(org\.springframework|tech|expert|android|dev|build)\." />
         </module>
         <module name="MethodParamPad">
             <property name="tokens"
                       value="CTOR_DEF, LITERAL_NEW, METHOD_CALL, METHOD_DEF,
                     SUPER_CTOR_CALL, ENUM_CONSTANT_DEF, RECORD_DEF"/>
         </module>
+        <module name="FinalParameters">
+            <property name="ignorePrimitiveTypes" value="true"/>
+        </module>
         <module name="NoWhitespaceBefore">
             <property name="tokens"
                       value="COMMA, SEMI, POST_INC, POST_DEC, DOT,
                     LABELED_STAT, METHOD_REF"/>
             <property name="allowLineBreaks" value="true"/>
+        </module>
+        <module name="NoWhitespaceAfter">
+            <property name="tokens" value="AT, INC, DEC, UNARY_MINUS, UNARY_PLUS, BNOT, LNOT, DOT, ARRAY_DECLARATOR, INDEX_OP"/>
         </module>
         <module name="ParenPad">
             <property name="tokens"
@@ -279,7 +293,7 @@
             <property name="option" value="NL"/>
             <property name="tokens"
                       value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR,
-                    LT, MINUS, MOD, NOT_EQUAL, QUESTION, SL, SR, STAR, METHOD_REF "/>
+                    LT, MINUS, MOD, NOT_EQUAL, QUESTION, SL, SR, STAR, METHOD_REF"/>
         </module>
         <module name="AnnotationLocation">
             <property name="id" value="AnnotationLocationMostCases"/>
