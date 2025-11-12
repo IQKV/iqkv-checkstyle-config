@@ -269,11 +269,11 @@
                       value="CTOR_DEF, LITERAL_NEW, METHOD_CALL, METHOD_DEF,
                     SUPER_CTOR_CALL, ENUM_CONSTANT_DEF, RECORD_DEF"/>
         </module>
-        <!--
         <module name="FinalParameters">
             <property name="ignorePrimitiveTypes" value="true"/>
+            <property name="ignoreUnnamedParameters" value="true"/>
+            <property name="tokens" value="CTOR_DEF, FOR_EACH_CLAUSE, LITERAL_CATCH"/>
         </module>
-        -->
         <module name="NoWhitespaceBefore">
             <property name="tokens"
                       value="COMMA, SEMI, POST_INC, POST_DEC, DOT,
