@@ -80,9 +80,9 @@ jobs:
             echo "Error: Could not extract version from POM"
             exit 1
           fi
-          
+
           echo "Current POM version: $CURRENT_VERSION"
-          
+
           # Convert SNAPSHOT to release version by removing the -SNAPSHOT suffix
           # Example: 1.0.0-SNAPSHOT becomes 1.0.0
           if [[ "$CURRENT_VERSION" == *"-SNAPSHOT" ]]; then
@@ -94,7 +94,7 @@ jobs:
             RELEASE_VERSION="$CURRENT_VERSION"
             echo "Using existing release version: $RELEASE_VERSION"
           fi
-          
+
           # Export versions for use in subsequent steps
           echo "VERSION=$RELEASE_VERSION" >> $GITHUB_OUTPUT
           echo "ORIGINAL_VERSION=$CURRENT_VERSION" >> $GITHUB_OUTPUT
