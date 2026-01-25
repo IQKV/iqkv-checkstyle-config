@@ -35,7 +35,7 @@
     <scm>
         <connection>scm:git:git://github.com/IQKV/checkstyle-config.git</connection>
         <developerConnection>scm:git:ssh://github.com:IQKV/checkstyle-config.git</developerConnection>
-        <url>https://github.com/IQKV/checkstyle-config/tree/main</url>
+        <url>https://github.com/IQKV/checkstyle-config/tree/dev</url>
     </scm>
 
     <distributionManagement>
