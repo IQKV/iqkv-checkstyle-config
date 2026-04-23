@@ -21,7 +21,7 @@ This directory contains a comprehensive Checkstyle configuration optimized for *
 - Improved annotation handling
 
 ### ✅ Modern Java Support
-- **Java 21+ Features**: Pattern matching, sealed classes, records
+- **Java 25+ Features**: Pattern matching, sealed classes, records
 - **Text Blocks**: Proper formatting and validation
 - **Records**: Component naming and structure validation
 - **Switch Expressions**: Enhanced syntax support
